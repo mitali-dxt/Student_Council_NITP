@@ -2,20 +2,23 @@ import React from 'react';
 import './App.css';
 import Navbar from './Navbar';
 import ComplaintForm from './ComplaintForm';
+import Footer from './Footer';
 
 const links = [
     { text: 'Home', href: '#home' },
-    { text: 'About', href: '#about' },
-    { text: 'Events', href: '#events' },
-    { text: 'Contact', href: '#contact' },
+    { text: 'Office Bearers', href: '#officeBearers' },
+    { text: 'Boards', href: '#boards' },
+    { text: 'Calendar', href: '#calendar' },
+    { text: 'Feedback', href: '#feedback' },
 ];
 
 const Homepage = () => {
     return (
-        <div>
+        <div className="homepage">
             <Navbar theme="dark" links={links} />
             <header>
-                <h1>Welcome to the Student Council</h1>
+                <h1>Student Council</h1>
+                <h2>NIT Patna</h2>
             </header>
             <main>
                 <section id="about">
@@ -28,12 +31,7 @@ const Homepage = () => {
                 </section>
                 <ComplaintForm />
             </main>
-            <footer>
-                <section id="contact">
-                    <h2>Contact Us</h2>
-                    <p>Contact information...</p>
-                </section>
-            </footer>
+            <Footer />
         </div>
     );
 };

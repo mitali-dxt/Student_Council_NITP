@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import './ComplaintForm.css';
 
 const ComplaintForm = () => {
     const [complaint, setComplaint] = useState({
         name: '',
         email: '',
-        message: ''
+        subject: '',
+        details: ''
     });
 
     const handleChange = (e) => {
@@ -21,21 +23,28 @@ const ComplaintForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>
-                Name:
-                <input type="text" name="name" onChange={handleChange} />
-            </label>
-            <label>
-                Email:
-                <input type="email" name="email" onChange={handleChange} />
-            </label>
-            <label>
-                Complaint:
-                <textarea name="message" onChange={handleChange} />
-            </label>
-            <input type="submit" value="Submit" />
-        </form>
+        <div className="form-container">
+            <form onSubmit={handleSubmit}>
+                <h2>Complaint Form</h2>
+                <label>
+                    Full Name:
+                    <input type="text" name="name" onChange={handleChange} />
+                </label>
+                <label>
+                    Email Address:
+                    <input type="email" name="email" onChange={handleChange} />
+                </label>
+                <label>
+                    Subject of Complaint:
+                    <input type="text" name="subject" onChange={handleChange} />
+                </label>
+                <label>
+                    Details of Complaint:
+                    <textarea name="details" onChange={handleChange} />
+                </label>
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
     );
 };
 
