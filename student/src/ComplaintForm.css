@@ -5,7 +5,9 @@
     backdrop-filter: blur(10px);
     border-radius: 25px;
     padding: 20px;
-    margin: 20px auto;
+    margin: auto;
+    margin-top: 200px;
+    
     width: 80%;
     max-width: 500px;
     color: #fff;
@@ -14,6 +16,7 @@
 form {
     display: flex;
     flex-direction: column;
+    
 }
 
 form h2 {

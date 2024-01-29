@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './Navbar';
 import ComplaintForm from './ComplaintForm';
 import Footer from './Footer';
+/*import BackgroundImage from './img/nit.jpg';*/
 
 const links = [
     { text: 'Home', href: '#home' },
@@ -16,7 +17,7 @@ const Homepage = () => {
     return (
         <div className="homepage">
             <Navbar theme="dark" links={links} />
-            <header>
+            <header className="hero">
                 <h1>Student Council</h1>
                 <h2>NIT Patna</h2>
             </header>
